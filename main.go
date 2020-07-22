@@ -1,17 +1,21 @@
 package main
 
 import (
-	"net/http"
-
+	"GolangNorthwindRestApi/database"
+	"GolangNorthwindRestApi/product"
 	"github.com/go-chi/chi"
-	"github.com/go-chi/chi/middleware"
+	"net/http"
+	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
+	databaseConnection := database.InitDB()
+	defer databaseConnection.Close()
+
+	var productRepository = product.NewRepository(databaseConnection)
+	var productService product.Service
+	productService = product.NewService(productRepository)
 	r := chi.NewRouter()
-	r.Use(middleware.Logger)
-	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("welcome"))
-	})
+	r.Mount("/products", product.MakeHttpHandler(productService))
 	http.ListenAndServe(":3000", r)
 }

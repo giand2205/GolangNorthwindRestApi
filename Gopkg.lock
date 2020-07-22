@@ -2,22 +2,50 @@
 
 
 [[projects]]
-  digest = "1:278f38b03fd0a30290fd1db6dc14eda3a176229cee57f87f9cfa15fbe71049b3"
+  digest = "1:8efc80bf88d71e42990777999788b0d8aeb685fd77e8c6315d0962e0fc9841bc"
   name = "github.com/go-chi/chi"
-  packages = [
-    ".",
-    "middleware",
-  ]
+  packages = ["."]
   pruneopts = "UT"
   revision = "86f9a6e7ce9bf453eaa339b51f88f586edbccbc1"
   version = "v4.1.2"
+
+[[projects]]
+  digest = "1:5e7a33ced74ca175463d277fdae4a674d1aef4e5e3934f27d8d707df4fb6d0fc"
+  name = "github.com/go-kit/kit"
+  packages = [
+    "endpoint",
+    "log",
+    "transport",
+    "transport/http",
+  ]
+  pruneopts = "UT"
+  revision = "cc938d52e0cdf4c811ab203f428fcd06f9d9a148"
+  version = "v0.10.0"
+
+[[projects]]
+  digest = "1:522a207de5459ab329732b5df6bb6dd7592da9fddf8a99e9f82609e370d82f9b"
+  name = "github.com/go-logfmt/logfmt"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "3be5f6aae7db841d31dc5e1b3bb7b4cff19200b3"
+  version = "v0.5.0"
+
+[[projects]]
+  digest = "1:a3af33fd30536d9c5a7b6ad542390919e57c1125097a194c7b3d9904109a0611"
+  name = "github.com/go-sql-driver/mysql"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "17ef3dd9d98b69acec3e85878995ada9533a9370"
+  version = "v1.5.0"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
     "github.com/go-chi/chi",
-    "github.com/go-chi/chi/middleware",
+    "github.com/go-kit/kit/endpoint",
+    "github.com/go-kit/kit/transport/http",
+    "github.com/go-sql-driver/mysql",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
