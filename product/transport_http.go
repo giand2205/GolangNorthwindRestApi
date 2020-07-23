@@ -16,8 +16,12 @@ func MakeHttpHandler(s Service) http.Handler {
 	r.Method(http.MethodGet, "/{id}", getProductByIdHandler)
 	getProductsHandler := kithttp.NewServer(makeGetProductsEndpoint(s), getProductsRequestDecoder, kithttp.EncodeJSONResponse)
 	r.Method(http.MethodPost, "/paginated", getProductsHandler)
-	addProductHandler := kithttp.NewServer(makeAddProductEndpoint(s), addProductRequestDecoder,  kithttp.EncodeJSONResponse)
+	addProductHandler := kithttp.NewServer(makeAddProductEndpoint(s), addProductRequestDecoder, kithttp.EncodeJSONResponse)
 	r.Method(http.MethodPost, "/", addProductHandler)
+	updateProductHandler := kithttp.NewServer(makeUpdateProductEndpoint(s), updateProductRequestDecoder, kithttp.EncodeJSONResponse)
+	r.Method(http.MethodPut, "/{id}", updateProductHandler)
+	deleteProductHandler := kithttp.NewServer(makeDeleteProductEndpoint(s), deleteProductRequestDecoder, kithttp.EncodeJSONResponse)
+	r.Method(http.MethodDelete, "/{id}", deleteProductHandler)
 	return r
 }
 
@@ -37,11 +41,27 @@ func getProductsRequestDecoder(context context.Context, r *http.Request) (interf
 	return request, nil
 }
 
-func addProductRequestDecoder(_ context.Context, r *http.Request)(interface{}, error){
-	request:=getAddProductRequest{}
+func addProductRequestDecoder(_ context.Context, r *http.Request) (interface{}, error) {
+	request := getAddProductRequest{}
 	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
 		panic(err)
 	}
 	return request, nil
+}
+
+func updateProductRequestDecoder(_ context.Context, r *http.Request) (interface{}, error) {
+	request := updateProductRequest{}
+	err := json.NewDecoder(r.Body).Decode(&request)
+	if err != nil {
+		panic(err)
+	}
+	return request, nil
+}
+
+func deleteProductRequestDecoder(_ context.Context, r *http.Request) (interface{}, error) {
+	productId := chi.URLParam(r, "id")
+	return deleteProductRequest{
+		ProductID: productId,
+	}, nil
 }

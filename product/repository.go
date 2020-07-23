@@ -7,6 +7,8 @@ type Repository interface {
 	GetProducts(params *getProductsRequest) ([]*Product, error)
 	GetTotalProducts() (int, error)
 	InsertProduct(params *getAddProductRequest) (int64, error)
+	UpdateProduct(params *updateProductRequest) (int64, error)
+	DeleteProduct(params *deleteProductRequest) (int64, error)
 }
 
 type repository struct {
@@ -75,4 +77,25 @@ func (repo *repository) InsertProduct(params *getAddProductRequest) (int64, erro
 	}
 	id, _ := result.LastInsertId()
 	return id, nil
+}
+
+func (repo *repository) UpdateProduct(params *updateProductRequest) (int64, error) {
+	const sql = `UPDATE products SET product_code=?, product_name=?, category=?, description=?, list_price=?, standard_cost=? 
+				WHERE id=?`
+	_, err := repo.db.Exec(sql, params.ProductCode, params.ProductName, params.Category, params.Description, params.ListPrice, params.StandardCost, params.ID)
+	if err != nil {
+		panic(err)
+	}
+
+	return params.ID, nil
+}
+
+func (repo *repository) DeleteProduct(params *deleteProductRequest) (int64, error) {
+	const sql = `DELETE FROM products WHERE id=?`
+	result, err := repo.db.Exec(sql, params.ProductID)
+	if err != nil {
+		panic(err)
+	}
+	rows, _ := result.RowsAffected()
+	return rows, nil
 }
