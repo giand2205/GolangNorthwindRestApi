@@ -2,6 +2,7 @@ package product
 
 import (
 	"context"
+	"encoding/json"
 	"github.com/go-chi/chi"
 	kithttp "github.com/go-kit/kit/transport/http"
 	"net/http"
@@ -13,6 +14,8 @@ func MakeHttpHandler(s Service) http.Handler {
 
 	getProductByIdHandler := kithttp.NewServer(makeGetProductByIdEndpoint(s), getProductByIdRequestDecoder, kithttp.EncodeJSONResponse)
 	r.Method(http.MethodGet, "/{id}", getProductByIdHandler)
+	getProductsHandler := kithttp.NewServer(makeGetProductsEndpoint(s), getProductsRequestDecoder, kithttp.EncodeJSONResponse)
+	r.Method(http.MethodPost, "/paginated", getProductsHandler)
 	return r
 }
 
@@ -21,4 +24,13 @@ func getProductByIdRequestDecoder(context context.Context, r *http.Request) (int
 	return getProductByIdRequest{
 		ProductID: productId,
 	}, nil
+}
+
+func getProductsRequestDecoder(context context.Context, r *http.Request) (interface{}, error) {
+	request := getProductsRequest{}
+	err := json.NewDecoder(r.Body).Decode(&request)
+	if err != nil {
+		panic(err)
+	}
+	return request, nil
 }

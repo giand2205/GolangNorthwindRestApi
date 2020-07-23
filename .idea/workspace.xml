@@ -20,30 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4aaef7a8-f4bf-4772-a981-e01ae8c866ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Gopkg.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gopkg.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/basic_auth.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/compress.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/content_charset.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/content_encoding.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/content_type.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/get_head.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/heartbeat.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/logger.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/middleware.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/nocache.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/profiler.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/realip.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/recoverer.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/request_id.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/route_headers.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/strip.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/terminal.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/throttle.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/timeout.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/url_format.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/value.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/go-chi/chi/middleware/wrap_writer.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/endpoint.go" beforeDir="false" afterPath="$PROJECT_DIR$/product/endpoint.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/product/repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/product/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/transport_http.go" beforeDir="false" afterPath="$PROJECT_DIR$/product/transport_http.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +51,15 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
