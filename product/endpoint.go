@@ -14,6 +14,15 @@ type getProductsRequest struct {
 	Offset int
 }
 
+type getAddProductRequest struct {
+	Category     string
+	Description  string
+	ListPrice    string
+	StandardCost string
+	ProductCode  string
+	ProductName  string
+}
+
 func makeGetProductByIdEndpoint(s Service) endpoint.Endpoint {
 	getProductByIdEndpoint := func(ctx context.Context, request interface{}) (interface{}, error) {
 		req := request.(getProductByIdRequest)
@@ -36,4 +45,16 @@ func makeGetProductsEndpoint(s Service) endpoint.Endpoint {
 		return products, nil
 	}
 	return getProductsEndpoint
+}
+
+func makeAddProductEndpoint(s Service) endpoint.Endpoint {
+	addProductEndpoint := func(ctx context.Context, request interface{}) (interface{}, error) {
+		req := request.(getAddProductRequest)
+		productId, err := s.InsertProduct(&req)
+		if err != nil {
+			panic(err)
+		}
+		return productId, nil
+	}
+	return addProductEndpoint
 }

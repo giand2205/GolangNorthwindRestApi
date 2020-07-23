@@ -22,7 +22,6 @@
     <list default="true" id="4aaef7a8-f4bf-4772-a981-e01ae8c866ab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/endpoint.go" beforeDir="false" afterPath="$PROJECT_DIR$/product/endpoint.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/product/repository.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/product/service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/transport_http.go" beforeDir="false" afterPath="$PROJECT_DIR$/product/transport_http.go" afterDir="false" />
