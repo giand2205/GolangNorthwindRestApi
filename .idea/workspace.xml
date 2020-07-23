@@ -22,6 +22,7 @@
     <list default="true" id="4aaef7a8-f4bf-4772-a981-e01ae8c866ab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/endpoint.go" beforeDir="false" afterPath="$PROJECT_DIR$/product/endpoint.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/product/repository.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/product/service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/transport_http.go" beforeDir="false" afterPath="$PROJECT_DIR$/product/transport_http.go" afterDir="false" />
@@ -107,21 +108,25 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="1230" y="472" width="410" height="170" key="#Dep/0.27.1920.1053@0.27.1920.1053" timestamp="1595515106380" />
-    <state width="914" height="275" key="GridCell.Tab.0.bottom" timestamp="1595518512416">
+    <state width="914" height="275" key="GridCell.Tab.0.bottom" timestamp="1595523367661">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="914" height="275" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1595518512416" />
-    <state width="914" height="275" key="GridCell.Tab.0.center" timestamp="1595518512416">
+    <state width="914" height="275" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1595523367661" />
+    <state width="914" height="275" key="GridCell.Tab.0.center" timestamp="1595523367660">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="914" height="275" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1595518512416" />
-    <state width="914" height="275" key="GridCell.Tab.0.left" timestamp="1595518512415">
+    <state width="914" height="275" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1595523367660" />
+    <state width="914" height="275" key="GridCell.Tab.0.left" timestamp="1595523367659">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="914" height="275" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1595518512415" />
-    <state width="914" height="275" key="GridCell.Tab.0.right" timestamp="1595518512416">
+    <state width="914" height="275" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1595523367659" />
+    <state width="914" height="275" key="GridCell.Tab.0.right" timestamp="1595523367661">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="914" height="275" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1595518512416" />
+    <state width="914" height="275" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1595523367661" />
+    <state x="291" y="152" width="764" height="783" key="find.popup" timestamp="1595523264266">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="291" y="152" width="764" height="783" key="find.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1595523264266" />
   </component>
 </project>
